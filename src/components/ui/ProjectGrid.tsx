@@ -35,7 +35,7 @@ export const ProjectGrid = () => {
 
     return (
         <section className="py-20 px-6 max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[280px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
 
                 {/* arca-sdk Card */}
                 <motion.div
@@ -92,9 +92,11 @@ export const ProjectGrid = () => {
                                 ))}
                             </div>
                         </div>
-                        <a href="https://ginialym.com/" target="_blank" rel="noopener noreferrer" className="w-fit flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/20 z-10">
-                            <ExternalLink className="w-4 h-4" /> Ver Demo Online
-                        </a>
+                        <div className="pt-4 relative z-10">
+                            <a href="https://ginialym.com/" target="_blank" rel="noopener noreferrer" className="w-fit flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/20">
+                                <ExternalLink className="w-4 h-4" /> Ver Demo Online
+                            </a>
+                        </div>
                         <Layers className="absolute -bottom-10 -right-10 w-64 h-64 opacity-[0.03]" />
                     </div>
                 </motion.div>
