@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Copy, Check, Linkedin, Github, Beer } from 'lucide-react';
+import { Mail, Copy, Check, Linkedin, Github } from 'lucide-react';
 
 /**
  * Componente de Contacto y Footer.
- * Refleja profesionalismo, facilidad de contacto y el espíritu de Río Cuarto.
+ * Refleja profesionalismo y facilidad de contacto.
  */
 export const ContactSection = () => {
     const [copied, setCopied] = useState(false);
@@ -97,14 +97,7 @@ export const ContactSection = () => {
                 {/* Footer Bottom */}
                 <div className="w-full pt-16 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-8 text-zinc-500 text-sm font-medium">
                     <div className="flex items-center gap-2">
-                        <Beer className="w-4 h-4 text-orange-500" />
-                        <a
-                            href="#"
-                            onClick={(e) => e.preventDefault()}
-                            className="hover:text-orange-400 transition-colors"
-                        >
-                            ¿Te gusta lo que ves? Invitame una birra (Río Cuarto style)
-                        </a>
+                        <p className="text-zinc-500">Impulsando la innovación digital.</p>
                     </div>
                     <p>© {new Date().getFullYear()} Marcela Borgarello. Hecho con Next.js 15 e IA.</p>
                 </div>
