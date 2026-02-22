@@ -2,12 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Lock, Package, BookOpen, Code, Database, ChevronRight, Cpu, Layers } from 'lucide-react';
+import { Github, ExternalLink, Lock, Package, BookOpen, Code, Database, ChevronRight, Cpu, Layers, ShieldCheck, Zap } from 'lucide-react';
 
 /**
  * Componente ProjectGrid.
- * Layout Bento Grid con micro-interacciones y bordes con gradiente.
- * Resalta GINIALYM como proyecto destacado e incluye tarjeta de Skills.
+ * Layout Bento Grid con descripciones técnicas enriquecidas (Senior Technical Writing).
  */
 export const ProjectGrid = () => {
     const certifications = [
@@ -28,14 +27,79 @@ export const ProjectGrid = () => {
     const cardVariants = {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
-        hover: { scale: 1.02, transition: { duration: 0.2 } },
+        hover: { scale: 1.01, transition: { duration: 0.2 } },
     };
 
     const gradientBorderStyle = "p-[1px] rounded-3xl bg-zinc-800 hover:bg-gradient-to-br hover:from-blue-500 hover:to-purple-500 transition-all duration-300";
 
     return (
-        <section className="py-20 px-6 max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
+        <section className="py-20 px-6 max-w-7xl mx-auto space-y-12">
+            <h2 className="text-3xl font-black text-white tracking-tight border-l-4 border-blue-500 pl-6 mb-12">Proyectos Destacados</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto">
+
+                {/* Ginialym Card - Featured Project (SaaS ERP/POS) */}
+                <motion.div
+                    variants={cardVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    whileHover="hover"
+                    viewport={{ once: true }}
+                    className="md:col-span-3 p-[1px] rounded-3xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 hover:from-blue-500/50 hover:to-purple-500/50 transition-all duration-300 shadow-2xl"
+                >
+                    <div className="w-full h-full rounded-[23px] bg-[#0A0A0A] p-8 md:p-12 flex flex-col md:flex-row gap-12 overflow-hidden relative">
+                        <div className="flex-1 space-y-6 relative z-10">
+                            <div className="flex items-center gap-4">
+                                <div className="p-3 rounded-2xl bg-blue-500/10 text-blue-400">
+                                    <Zap className="w-8 h-8" />
+                                </div>
+                                <div>
+                                    <span className="text-blue-400 text-xs font-black uppercase tracking-[0.2em] block mb-1">Caso de Estudio</span>
+                                    <h3 className="text-4xl font-black text-white tracking-tighter">Ginialym</h3>
+                                </div>
+                            </div>
+
+                            <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl">
+                                Plataforma integral de gestión comercial diseñada para escalar negocios en el complejo ecosistema impositivo argentino.
+                            </p>
+
+                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                                <li className="flex gap-3 text-zinc-300">
+                                    <ShieldCheck className="w-5 h-5 text-blue-500 shrink-0" />
+                                    <span><strong>Automatización Fiscal:</strong> Facturación ARCA (A, B, C) en tiempo real, reduciendo ciclos manuales en un 70%.</span>
+                                </li>
+                                <li className="flex gap-3 text-zinc-300">
+                                    <Layers className="w-5 h-5 text-blue-500 shrink-0" />
+                                    <span><strong>Ecosistema de Pagos:</strong> Integración de Mercado Pago con conciliación automática de ventas.</span>
+                                </li>
+                                <li className="flex gap-3 text-zinc-300">
+                                    <Cpu className="w-5 h-5 text-blue-500 shrink-0" />
+                                    <span><strong>Arquitectura Serverless:</strong> Alta disponibilidad con AWS, garantizando latencias mínimas en POS.</span>
+                                </li>
+                                <li className="flex gap-3 text-zinc-300">
+                                    <Database className="w-5 h-5 text-blue-500 shrink-0" />
+                                    <span><strong>Stock Real-time:</strong> Sincronización multicanal mediante WebSockets para evitar quiebres.</span>
+                                </li>
+                            </ul>
+
+                            <div className="flex flex-wrap gap-2 pt-4">
+                                {["Next.js 15", "React 19", "AWS", "Bun", "AFIP Integration", "Mercado Pago"].map(badge => (
+                                    <span key={badge} className="px-3 py-1.5 rounded-lg bg-zinc-900 text-zinc-400 text-[10px] font-black uppercase tracking-widest border border-zinc-800">{badge}</span>
+                                ))}
+                            </div>
+
+                            <div className="flex items-center gap-4 pt-6">
+                                <a href="https://ginialym.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-8 py-4 rounded-2xl bg-blue-600 text-white font-black hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/20 active:scale-95">
+                                    <ExternalLink className="w-5 h-5" /> Ver Demo Online
+                                </a>
+                                <span className="text-zinc-500 text-xs font-bold border-l border-zinc-800 pl-4 py-2 flex items-center gap-2">
+                                    <Lock className="w-3 h-3" /> Repo Privado
+                                </span>
+                            </div>
+                        </div>
+                        <Layers className="absolute -bottom-20 -right-20 w-96 h-96 opacity-[0.05] -rotate-12" />
+                    </div>
+                </motion.div>
 
                 {/* arca-sdk Card */}
                 <motion.div
@@ -44,64 +108,33 @@ export const ProjectGrid = () => {
                     whileInView="animate"
                     whileHover="hover"
                     viewport={{ once: true }}
-                    className={gradientBorderStyle}
+                    className="md:col-span-2 p-[1px] rounded-3xl bg-zinc-800 hover:bg-gradient-to-br hover:from-orange-500/50 hover:to-red-500/50 transition-all duration-300"
                 >
-                    <div className="w-full h-full rounded-[23px] bg-zinc-900/90 p-8 flex flex-col justify-between overflow-hidden relative">
+                    <div className="w-full h-full rounded-[23px] bg-zinc-900/90 p-8 flex flex-col justify-between gap-8 h-[360px] overflow-hidden relative">
                         <div className="space-y-4 relative z-10">
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center justify-between">
                                 <div className="p-2 rounded-xl bg-orange-500/10 text-orange-500">
                                     <Package className="w-6 h-6" />
                                 </div>
-                                <span className="px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/5 text-orange-400 text-xs font-bold uppercase tracking-wider">npm package</span>
+                                <span className="px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/5 text-orange-400 text-[10px] font-black uppercase tracking-wider">Featured Open Source</span>
                             </div>
-                            <h3 className="text-2xl font-bold text-white">arca-sdk</h3>
-                            <p className="text-zinc-400 text-sm">SDK Open Source para facturación AFIP. Simplificando la integración fiscal en Argentina.</p>
+                            <h3 className="text-2xl font-black text-white tracking-tight">arca-sdk</h3>
+                            <p className="text-zinc-400 text-sm leading-relaxed">
+                                Abstracción de servicios fiscales SOAP/WSDL nativos de AFIP hacia una API moderna y tipada para Node.js.
+                                Reduce el tiempo de integración de semanas a días.
+                            </p>
+                            <div className="flex gap-2 text-[10px] font-bold text-zinc-500">
+                                <span>#NodeJS</span> <span>#TypeScript</span> <span>#OpenSource</span>
+                            </div>
                         </div>
-                        <a href="https://github.com/marcelaborgarello/arca-sdk" target="_blank" rel="noopener noreferrer" className="w-fit flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-800 text-white text-sm font-bold hover:bg-zinc-700 transition-colors z-10">
+                        <a href="https://github.com/marcelaborgarello/arca-sdk" target="_blank" rel="noopener noreferrer" className="w-fit flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-800 text-white text-sm font-black hover:bg-zinc-700 transition-colors z-10 border border-zinc-700">
                             <Github className="w-4 h-4" /> GitHub Repo
                         </a>
-                        <Github className="absolute -bottom-4 -right-4 w-24 h-24 opacity-5" />
+                        <Github className="absolute -bottom-10 -right-10 w-48 h-48 opacity-[0.03]" />
                     </div>
                 </motion.div>
 
-                {/* Ginialym Card - Featured Project */}
-                <motion.div
-                    variants={cardVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    whileHover="hover"
-                    viewport={{ once: true }}
-                    className="md:col-span-2 p-[1px] rounded-3xl bg-gradient-to-br from-blue-500/50 to-purple-500/50 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-2xl shadow-blue-500/10"
-                >
-                    <div className="w-full h-full rounded-[23px] bg-[#0A0A0A] p-8 flex flex-col justify-between overflow-hidden relative">
-                        <div className="space-y-4 relative z-10">
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-3">
-                                    <div className="p-2 rounded-xl bg-blue-500/10 text-blue-400">
-                                        <Lock className="w-6 h-6" />
-                                    </div>
-                                    <span className="text-blue-400 text-xs font-bold uppercase tracking-widest">Featured Project</span>
-                                </div>
-                                <span className="text-zinc-500 text-xs font-medium bg-zinc-800/50 px-3 py-1 rounded-full border border-zinc-700">Repo Privado 🔒</span>
-                            </div>
-                            <h3 className="text-3xl font-extrabold text-white tracking-tight">Ginialym</h3>
-                            <p className="text-zinc-400 text-base max-w-lg leading-relaxed">SaaS ERP/POS de alto rendimiento diseñado para el mercado argentino. Gestión avanzada, facturación ARCA y pagos con Mercado Pago.</p>
-                            <div className="flex flex-wrap gap-2 pt-2">
-                                {["SaaS", "Next.js 15", "AWS", "AFIP Integration"].map(badge => (
-                                    <span key={badge} className="px-2.5 py-1 rounded-md bg-zinc-800 text-zinc-300 text-[10px] font-bold uppercase tracking-tighter border border-zinc-700">{badge}</span>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="pt-4 relative z-10">
-                            <a href="https://ginialym.com/" target="_blank" rel="noopener noreferrer" className="w-fit flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/20">
-                                <ExternalLink className="w-4 h-4" /> Ver Demo Online
-                            </a>
-                        </div>
-                        <Layers className="absolute -bottom-10 -right-10 w-64 h-64 opacity-[0.03]" />
-                    </div>
-                </motion.div>
-
-                {/* Especializaciones Card */}
+                {/* Pull Shark Card */}
                 <motion.div
                     variants={cardVariants}
                     initial="initial"
@@ -110,14 +143,39 @@ export const ProjectGrid = () => {
                     viewport={{ once: true }}
                     className={gradientBorderStyle}
                 >
-                    <div className="w-full h-full rounded-[23px] bg-zinc-900/90 p-8 flex flex-col gap-5">
-                        <h3 className="text-lg font-bold text-white tracking-tight">Formación Senior</h3>
+                    <div className="w-full h-full rounded-[23px] bg-zinc-900/90 p-8 flex flex-col justify-between h-[360px]">
+                        <div className="space-y-4">
+                            <div className="p-2 rounded-xl bg-blue-500/10 text-blue-400 w-fit">
+                                <Zap className="w-6 h-6" />
+                            </div>
+                            <h3 className="text-xl font-black text-white">Pull Shark 🦈</h3>
+                            <p className="text-zinc-400 text-sm leading-relaxed">
+                                Mi pequeño homenaje al espíritu colaborativo. Un recordatorio de mi compromiso con la calidad y el envío constante de código en la comunidad.
+                            </p>
+                        </div>
+                        <div className="p-4 rounded-xl bg-zinc-800/50 border border-zinc-700/50 text-center">
+                            <span className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">NPM Package Easter Egg</span>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Especializaciones */}
+                <motion.div
+                    variants={cardVariants}
+                    initial="initial"
+                    whileInView="animate"
+                    whileHover="hover"
+                    viewport={{ once: true }}
+                    className={gradientBorderStyle}
+                >
+                    <div className="w-full h-full rounded-[23px] bg-zinc-900/90 p-8 flex flex-col gap-6">
+                        <h3 className="text-lg font-black text-white tracking-tight uppercase tracking-widest text-zinc-500 text-xs">Formación Senior</h3>
                         <div className="flex flex-col gap-2">
                             {certifications.map((cert) => (
                                 <a key={cert.title} href={cert.url} target="_blank" rel="noopener noreferrer" className="group/item flex items-center justify-between p-3 rounded-xl bg-zinc-800/30 border border-zinc-800 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all">
                                     <div className="flex items-center gap-3">
                                         <div className="p-1.5 rounded-lg bg-zinc-800 text-blue-400">{cert.icon}</div>
-                                        <span className="text-xs font-medium text-zinc-400 group-hover/item:text-white transition-colors">{cert.title}</span>
+                                        <span className="text-xs font-bold text-zinc-400 group-hover/item:text-white transition-colors">{cert.title}</span>
                                     </div>
                                     <ChevronRight className="w-3 h-3 text-zinc-600 group-hover/item:text-blue-400 transition-all" />
                                 </a>
@@ -126,42 +184,25 @@ export const ProjectGrid = () => {
                     </div>
                 </motion.div>
 
-                {/* Skills Card */}
+                {/* Tech Stack */}
                 <motion.div
                     variants={cardVariants}
                     initial="initial"
                     whileInView="animate"
                     whileHover="hover"
                     viewport={{ once: true }}
-                    className={gradientBorderStyle}
+                    className="md:col-span-2 p-[1px] rounded-3xl bg-zinc-800 hover:bg-gradient-to-br hover:from-purple-500/50 hover:to-blue-500/50 transition-all duration-300"
                 >
-                    <div className="w-full h-full rounded-[23px] bg-zinc-900/90 p-8 flex flex-col gap-5">
-                        <h3 className="text-lg font-bold text-white tracking-tight">Tech Stack</h3>
-                        <div className="grid grid-cols-2 gap-3">
+                    <div className="w-full h-full rounded-[23px] bg-zinc-900/90 p-8 flex flex-col gap-6">
+                        <h3 className="text-lg font-black text-white uppercase tracking-widest text-zinc-500 text-xs">Principal Tech Stack</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                             {skills.map((skill) => (
-                                <div key={skill.name} className="flex items-center gap-2 p-2 rounded-xl bg-zinc-800/50 border border-zinc-800">
-                                    <div className="text-purple-400">{skill.icon}</div>
-                                    <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-widest">{skill.name}</span>
+                                <div key={skill.name} className="flex items-center gap-3 p-4 rounded-2xl bg-zinc-800/50 border border-zinc-800 hover:border-purple-500/30 transition-all">
+                                    <div className="text-purple-400 p-2 bg-zinc-900 rounded-lg">{skill.icon}</div>
+                                    <span className="text-xs font-black text-zinc-200 uppercase tracking-widest">{skill.name}</span>
                                 </div>
                             ))}
                         </div>
-                    </div>
-                </motion.div>
-
-                {/* More Projects / Placeholder Card */}
-                <motion.div
-                    variants={cardVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    whileHover="hover"
-                    viewport={{ once: true }}
-                    className={gradientBorderStyle}
-                >
-                    <div className="w-full h-full rounded-[23px] bg-zinc-900/90 p-8 flex flex-col items-center justify-center text-center gap-4">
-                        <div className="p-4 rounded-[30px] bg-zinc-800/50 text-zinc-500">
-                            <Cpu className="w-10 h-10" />
-                        </div>
-                        <p className="text-zinc-500 text-xs font-bold uppercase tracking-[0.2em]">Más por venir</p>
                     </div>
                 </motion.div>
 
