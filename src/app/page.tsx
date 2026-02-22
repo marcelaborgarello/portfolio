@@ -1,6 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { ProjectGrid } from "@/components/ui/ProjectGrid";
-import { ContactSection } from "@/components/ContactSection";
+import { ContactFooter } from "@/components/ContactFooter";
 
 /**
  * Página principal del portfolio de Marcela Borgarello.
@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#0A0A0A] text-white">
       <Hero />
       <ProjectGrid />
-      <ContactSection />
+      <ContactFooter />
     </main>
   );
 }
