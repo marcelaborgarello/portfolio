@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * Logo SVG estilizado con gradientes.
  * Representa la arquitectura y solidez del software.

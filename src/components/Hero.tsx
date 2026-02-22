@@ -1,8 +1,7 @@
 'use client';
-
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, ExternalLink, Award, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 import { Logo } from './Logo';
 
 /**
@@ -89,18 +88,22 @@ export const Hero = () => {
                 {/* Social Links */}
                 <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
                     {socialLinks.map((link) => (
-                        <motion.a
+                        <Link
                             key={link.name}
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ scale: 1.05, y: -2 }}
-                            whileTap={{ scale: 0.95 }}
                             className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-zinc-800 bg-zinc-900/60 hover:bg-zinc-800/80 transition-all text-zinc-100 font-semibold shadow-lg backdrop-blur-sm"
                         >
-                            {link.icon}
-                            {link.name}
-                        </motion.a>
+                            <motion.span
+                                whileHover={{ scale: 1.05, y: -2 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="flex items-center gap-2"
+                            >
+                                {link.icon}
+                                {link.name}
+                            </motion.span>
+                        </Link>
                     ))}
                     <motion.div
                         className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-yellow-500/20 bg-yellow-500/5 text-yellow-500/90 font-semibold italic"

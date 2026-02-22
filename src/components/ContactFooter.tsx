@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Mail, Copy, Check, Linkedin, Github, ExternalLink } from 'lucide-react';
 
 /**
@@ -67,38 +68,46 @@ export const ContactFooter = () => {
                     </motion.button>
 
                     {/* LinkedIn Button */}
-                    <motion.a
+                    <Link
                         href="https://www.linkedin.com/in/marcela-borgarello/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        whileHover={{ y: -5 }}
                         className="group p-6 rounded-3xl border border-zinc-800 bg-zinc-900/50 hover:border-blue-500/30 transition-all flex flex-col items-center gap-4"
                     >
-                        <div className="p-4 rounded-2xl bg-zinc-800 text-blue-400 group-hover:bg-blue-500/10 transition-colors">
-                            <Linkedin className="w-6 h-6" />
-                        </div>
-                        <div className="space-y-1">
-                            <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">LinkedIn</p>
-                            <p className="text-zinc-200 font-bold flex items-center gap-1">Conectar <ExternalLink className="w-3 h-3 opacity-50" /></p>
-                        </div>
-                    </motion.a>
+                        <motion.div
+                            whileHover={{ y: -5 }}
+                            className="flex flex-col items-center gap-4"
+                        >
+                            <div className="p-4 rounded-2xl bg-zinc-800 text-blue-400 group-hover:bg-blue-500/10 transition-colors">
+                                <Linkedin className="w-6 h-6" />
+                            </div>
+                            <div className="space-y-1 text-center">
+                                <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">LinkedIn</p>
+                                <p className="text-zinc-200 font-bold flex items-center justify-center gap-1">Conectar <ExternalLink className="w-3 h-3 opacity-50" /></p>
+                            </div>
+                        </motion.div>
+                    </Link>
 
                     {/* GitHub Button */}
-                    <motion.a
+                    <Link
                         href="https://github.com/marcelaborgarello"
                         target="_blank"
                         rel="noopener noreferrer"
-                        whileHover={{ y: -5 }}
                         className="group p-6 rounded-3xl border border-zinc-800 bg-zinc-900/50 hover:border-purple-500/30 transition-all flex flex-col items-center gap-4"
                     >
-                        <div className="p-4 rounded-2xl bg-zinc-800 text-purple-400 group-hover:bg-purple-500/10 transition-colors">
-                            <Github className="w-6 h-6" />
-                        </div>
-                        <div className="space-y-1">
-                            <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">GitHub</p>
-                            <p className="text-zinc-200 font-bold flex items-center gap-1">Ver Código <ExternalLink className="w-3 h-3 opacity-50" /></p>
-                        </div>
-                    </motion.a>
+                        <motion.div
+                            whileHover={{ y: -5 }}
+                            className="flex flex-col items-center gap-4"
+                        >
+                            <div className="p-4 rounded-2xl bg-zinc-800 text-purple-400 group-hover:bg-purple-500/10 transition-colors">
+                                <Github className="w-6 h-6" />
+                            </div>
+                            <div className="space-y-1 text-center">
+                                <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">GitHub</p>
+                                <p className="text-zinc-200 font-bold flex items-center justify-center gap-1">Ver Código <ExternalLink className="w-3 h-3 opacity-50" /></p>
+                            </div>
+                        </motion.div>
+                    </Link>
                 </div>
 
                 {/* Footer Bottom */}
