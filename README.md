@@ -14,7 +14,7 @@ Certificaciones de alto nivel que respaldan mi experiencia técnica:
 - ⚙️ [Backend Developer](https://apx.school/profiles/7abedec7-091e-46dd-81ec-47242cac2659/dev-1)
 
 ## Proyectos Destacados
-* 🚀 **[arca-sdk](https://github.com/marcelaborgarello/arca-sdk)**: SDK Open Source para la integración con servicios de AFIP (Argentina).
+* 🚀 **[arca-sdk](https://github.com/marcelaborgarello/arca-sdk)**: SDK Open Source para la integración con servicios de ARCA/AFIP (Argentina).
 * 💼 **[Ginialym](https://ginialym.com/)**: SaaS ERP/POS privado, diseñado para la gestión integral de negocios con arquitectura moderna.
 
 ## Tech Stack
