@@ -1,0 +1,30 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#3b82f6" />
+      <stop offset="100%" stopColor="#a855f7" />
+    </linearGradient>
+  </defs>
+  {/* Estructura de arquitectura: hexágono estilizado con capas */}
+  <path 
+    d="M50 5L90 27.5V72.5L50 95L10 72.5V27.5L50 5Z" 
+    stroke="url(#logo-gradient)" 
+    strokeWidth="4" 
+    strokeLinejoin="round"
+  />
+  <path 
+    d="M50 25L80 42.5V57.5L50 75L20 57.5V42.5L50 25Z" 
+    fill="url(#logo-gradient)" 
+    fillOpacity="0.1"
+    stroke="url(#logo-gradient)" 
+    strokeWidth="2" 
+  />
+  {/* Elemento central de conexión */}
+  <circle cx="50" cy="50" r="8" fill="url(#logo-gradient)" />
+  <path 
+    d="M50 25V35M50 65V75M20 42.5L30 48M70 52L80 57.5M20 57.5L30 52M70 48L80 42.5" 
+    stroke="url(#logo-gradient)" 
+    strokeWidth="2" 
+    strokeLinecap="round"
+  />
+</svg>
