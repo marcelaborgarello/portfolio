@@ -6,7 +6,7 @@ import { Logo } from './Logo';
 
 /**
  * Componente Hero Principal.
- * Bio actualizada: Senior Developer & SaaS Architect.
+ * Bio actualizada: Full Stack Developer.
  * Badge: "Potenciada por IA".
  */
 export const Hero = () => {
@@ -65,7 +65,7 @@ export const Hero = () => {
                 {/* Textos Bio */}
                 <div className="space-y-6">
                     <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white">
-                        Senior <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">SaaS Architect</span>
+                        Full Stack <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Developer</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-zinc-400 font-medium max-w-3xl leading-relaxed">
                         Especialista en transformar ideas complejas en productos reales escalables
@@ -105,6 +105,20 @@ export const Hero = () => {
                             </motion.span>
                         </Link>
                     ))}
+                    <Link
+                        href="/cv-marcela-borgarello.pdf"
+                        download
+                        className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 transition-all text-blue-400 font-bold shadow-lg backdrop-blur-sm group"
+                    >
+                        <motion.span
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center gap-2"
+                        >
+                            <Sparkles className="w-5 h-5 group-hover:animate-pulse" />
+                            Descargar CV
+                        </motion.span>
+                    </Link>
                     <motion.div
                         className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-yellow-500/20 bg-yellow-500/5 text-yellow-500/90 font-semibold italic"
                     >

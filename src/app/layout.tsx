@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Marcela Borgarello | SaaS Architect & Senior Developer",
-  description: "Portfolio profesional de Marcela Borgarello, Senior Full-Stack Developer & SaaS Architect. Especialista en Next.js, React e IA-Driven Development.",
+  title: "Marcela Borgarello | Full Stack Developer",
+  description: "Portfolio profesional de Marcela Borgarello, Full Stack Developer. Especialista en Next.js, React e IA-Driven Development.",
 };
 
 export default function RootLayout({

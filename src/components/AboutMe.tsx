@@ -37,7 +37,7 @@ export const AboutMe = () => {
                     {[
                         { icon: <Sparkles className="w-4 h-4 text-yellow-400" />, label: "IA-Driven Development" },
                         { icon: <Code2 className="w-4 h-4 text-blue-400" />, label: "Clean Code Argentina" },
-                        { icon: <Rocket className="w-4 h-4 text-purple-400" />, label: "SaaS Architect" }
+                        { icon: <Rocket className="w-4 h-4 text-purple-400" />, label: "Full Stack Developer" }
                     ].map((trait, i) => (
                         <div key={i} className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-sm font-bold text-zinc-300">
                             {trait.icon}

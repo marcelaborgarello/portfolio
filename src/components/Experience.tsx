@@ -10,18 +10,18 @@ import { AnimateIn } from './ui/AnimateIn';
 export const Experience = () => {
     const experiences = [
         {
-            title: "SaaS Architect & Founder",
+            title: "Full Stack Developer & Founder",
             company: "Ginialym",
             period: "2022 — Actualidad",
             description: "Diseño y escalado de una arquitectura multi-tenant para el mercado argentino. Implementación de núcleos de facturación críticos y automatización de procesos operativos para pymes.",
             impact: "Mantenimiento de uptime del 99.9% y reducción de carga operativa en un 70% para clientes activos."
         },
         {
-            title: "Full-Stack Developer & Freelance",
-            company: "Proyectos Independientes",
-            period: "2019 — 2022",
-            description: "Desarrollo de MVPs para startups y soluciones de automatización para empresas locales. Foco en React, Node.js e integraciones de terceros (Mercado Pago, Logistics APIs).",
-            impact: "Entregas exitosas de +10 productos digitales desde concepto hasta producción."
+            title: "Gestión Comercial & Negocios Propios",
+            company: "Independiente",
+            period: "1980 — 2024",
+            description: "45 años gestionando negocios propios. Base empírica que me permite diseñar software que resuelve problemas reales del mundo comercial.",
+            impact: "Liderazgo y visión estratégica aplicada al desarrollo técnico."
         }
     ];
 

@@ -112,7 +112,7 @@ export const ContactFooter = () => {
 
                 {/* Footer Bottom */}
                 <div className="w-full pt-12 border-t border-zinc-800/50 flex flex-col md:flex-row items-center justify-between gap-6 text-zinc-500 text-sm font-medium">
-                    <p>© {new Date().getFullYear()} Marcela Borgarello. Senior SaaS Architect.</p>
+                    <p>© {new Date().getFullYear()} Marcela Borgarello. Full Stack Developer.</p>
                     <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                         <span>Disponible para nuevos desafíos</span>
