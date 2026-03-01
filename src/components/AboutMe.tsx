@@ -18,17 +18,16 @@ export const AboutMe = () => {
 
                 <div className="space-y-6">
                     <p className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tighter">
-                        De <span className="text-blue-500">Río Cuarto</span> al mundo SaaS, construyendo soluciones que resuelven problemas reales.
+                        40 años de <span className="text-blue-500">ADN comercial</span> aplicados al desarrollo de software moderno.
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-zinc-400 text-lg leading-relaxed">
                         <p>
-                            Soy la "madre" de <span className="text-zinc-200 font-bold underline decoration-blue-500/30">Ginialym</span> y <span className="text-zinc-200 font-bold underline decoration-purple-500/30">arca-sdk</span>.
-                            Mi pasión es aplicar **IA y arquitecturas modernas** para simplificar el complejo ecosistema fiscal y operativo argentino.
+                            Mi pericia no viene solo de los libros, sino de gestionar negocios desde los 12 años. Soy Perito Mercantil de formación y desarrolladora por vocación de impacto.
+                            Traduzco décadas de intuición en ventas y gestión en código robusto con <span className="text-zinc-200 font-bold underline decoration-blue-500/30">Next.js</span> y <span className="text-zinc-200 font-bold underline decoration-purple-500/30">Bun</span>.
                         </p>
                         <p>
-                            Creo en el <span className="italic">clean code</span> como una forma de respeto al equipo, y en <span className="text-orange-500 font-bold">Bun 🔥</span> como el estándar de performance.
-                            Busco que mi código sea robusto por dentro y absurdamente simple por fuera.
+                            Creo en el software pragmático que resuelve cuellos de botella reales. Mi enfoque es construir herramientas que yo misma hubiera querido tener en mis propios negocios: eficientes, estables y sin fricciones.
                         </p>
                     </div>
                 </div>

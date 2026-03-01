@@ -71,13 +71,13 @@ export const ProjectGrid = () => {
                                     <Zap className="w-8 h-8" />
                                 </div>
                                 <div>
-                                    <span className="text-blue-400 text-xs font-black uppercase tracking-[0.2em] block mb-1">Featured Case Study</span>
+                                    <span className="text-blue-400 text-xs font-black uppercase tracking-[0.2em] block mb-1">Building in Public</span>
                                     <h3 className="text-4xl font-black text-white tracking-tighter italic lg:text-5xl">Ginialym</h3>
                                 </div>
                             </div>
 
                             <p className="text-zinc-300 text-lg leading-relaxed max-w-2xl">
-                                SaaS ERP/POS diseñado para la complejidad argentina: Facturación ARCA escalable, gestión de stock real-time y cobros interoperables.
+                                El sistema que nació en el mostrador de una verdulería. Un proyecto en desarrollo activo para simplificar la complejidad fiscal (ARCA) y los cobros digitales con una arquitectura viva.
                             </p>
 
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm pt-4">
@@ -120,12 +120,12 @@ export const ProjectGrid = () => {
                                     href="https://ginialym.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full sm:w-auto flex items-center justify-center gap-2 px-10 py-5 rounded-2xl bg-blue-600 text-white font-black hover:bg-blue-500 transition-all shadow-2xl shadow-blue-600/30 active:scale-95 group"
+                                    className="w-full sm:w-auto flex items-center justify-center gap-2 px-10 py-5 rounded-2xl bg-zinc-800 text-white font-black hover:bg-zinc-700 transition-all shadow-xl active:scale-95 group border border-zinc-700"
                                 >
-                                    Ver Demo Online <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                    Ver Progreso <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </Link>
                                 <span className="text-zinc-500 text-xs font-bold flex items-center gap-2 border-zinc-800">
-                                    <Lock className="w-4 h-4" /> Repositorio Privado 🔒
+                                    <Sparkles className="w-4 h-4 text-blue-400" /> Desarrollo Activo
                                 </span>
                             </div>
                         </div>

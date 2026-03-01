@@ -78,7 +78,7 @@ export const Hero = () => {
                     {stack.map((tech) => (
                         <span
                             key={tech}
-                            className="px-4 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900/50 text-zinc-400 text-sm font-medium"
+                            className="px-4 py-1.5 rounded-lg border border-zinc-700 bg-zinc-800/80 text-white text-sm font-medium backdrop-blur-sm"
                         >
                             {tech}
                         </span>
