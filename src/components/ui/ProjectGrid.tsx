@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, ExternalLink, Lock, Package, BookOpen, Code, Database, ChevronRight, Cpu, Layers, ShieldCheck, Zap, Monitor, Settings, Award } from 'lucide-react';
+import { Github, ExternalLink, Lock, Package, BookOpen, Code, Database, ChevronRight, Cpu, Layers, ShieldCheck, Zap, Monitor, Settings, Award, Sparkles } from 'lucide-react';
 
 /**
  * Componente ProjectGrid.
