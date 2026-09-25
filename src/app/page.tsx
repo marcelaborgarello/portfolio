@@ -6,7 +6,7 @@ import { ContactFooter } from "@/components/ContactFooter";
 
 /**
  * Página principal del portfolio de Marcela Borgarello.
- * Estética minimalista dark mode con componentes reactivos y Bento Grid.
+ * Modo oscuro; secciones: portada, sobre mí, experiencia, proyectos y contacto.
  */
 export default function Home() {
   return (

@@ -1,30 +1,37 @@
-# Marcela Borgarello - Senior Full-Stack Developer
+# Marcela Borgarello · Desarrolladora full stack
 
 <p align="center">
   <img src="src/app/icon.svg" width="120" alt="Logo Marcela Borgarello" />
 </p>
 
+Código de mi portfolio personal.
+
 ## Sobre mí
-Soy Senior Full-Stack Developer y **SaaS Architect**. Mi filosofía se resume en que **"no aprender es morir"**, lo que me impulsa a mantenerme a la vanguardia tecnológica. Actualmente, me enfoco en el **IA-Driven Development**, integrando inteligencia artificial de manera estratégica para optimizar ciclos de desarrollo y construir productos más robustos y escalables.
 
-## Certificaciones APX (Formación Especializada)
-Certificaciones de alto nivel que respaldan mi experiencia técnica:
-- 🎓 [Web Foundations](https://apx.school/profiles/7abedec7-091e-46dd-81ec-47242cac2659/mod-0)
-- 🧪 [React Specialist](https://apx.school/profiles/7abedec7-091e-46dd-81ec-47242cac2659/web-1)
-- ⚙️ [Backend Developer](https://apx.school/profiles/7abedec7-091e-46dd-81ec-47242cac2659/dev-1)
+Soy perito mercantil y hace unos 6 años que estudio programación. Trabajo en comercios desde los 12 años, y lo que construyo sale de problemas que viví detrás del mostrador.
 
-## Proyectos Destacados
-* 🚀 **[arca-sdk](https://github.com/marcelaborgarello/arca-sdk)**: SDK Open Source para la integración con servicios de ARCA/AFIP (Argentina).
-* 💼 **[Ginialym](https://ginialym.com/)**: SaaS ERP/POS privado, diseñado para la gestión integral de negocios con arquitectura moderna.
+Programo con agentes de IA (principalmente Claude Code): yo defino qué hay que hacer, reviso el plan antes de que se toque el código y valido el resultado contra casos reales de mis negocios. La IA escribe el código; las decisiones y la revisión son mías.
 
-## Tech Stack
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Next.js 15](https://img.shields.io/badge/Next.js%2015-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React 19](https://img.shields.io/badge/React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)
+## Proyectos
 
----
-🦈 **GitHub Pull Shark** | IA-Driven Developer | SaaS Architect
+- **[Ginialym](https://ginialym.com/)**: sistema de gestión para comercios (caja, stock, proveedores, facturación electrónica con ARCA y cobros con Mercado Pago). Lo empecé en diciembre de 2025. Hoy lo usan a diario dos negocios: mi local y la panadería de mi hija. Código privado.
+- **[arca-sdk](https://github.com/marcelaborgarello/arca-sdk)**: librería open source para facturar electrónicamente con ARCA desde Node.js y TypeScript. La uso en producción en Ginialym.
+- **[ginialtech-mcp](https://github.com/marcelaborgarello/ginialteach-mcp)**: conector propio que les da contexto y reglas a los agentes de IA con los que programo.
+- **[Sin Humo](https://github.com/marcelaborgarello/sin-humo)**: app para dejar de fumar que muestra cuánto ahorrás.
+
+## Formación
+
+- APX: [Web Foundations](https://apx.school/profiles/7abedec7-091e-46dd-81ec-47242cac2659/mod-0), [React Specialist](https://apx.school/profiles/7abedec7-091e-46dd-81ec-47242cac2659/web-1) y [Backend Developer](https://apx.school/profiles/7abedec7-091e-46dd-81ec-47242cac2659/dev-1)
+
+## Cómo está hecho este portfolio
+
+Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion y Bun.
+
+```bash
+bun install
+bun dev
+```
+
+## Contacto
+
+imprenart@gmail.com · [LinkedIn](https://www.linkedin.com/in/marcela-borgarello/)

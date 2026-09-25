@@ -1,13 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, ExternalLink, Award, Sparkles } from 'lucide-react';
+import { Github, Linkedin, ExternalLink, FileDown } from 'lucide-react';
 import Link from 'next/link';
 import { Logo } from './Logo';
 
 /**
- * Componente Hero Principal.
- * Bio actualizada: Full Stack Developer.
- * Badge: "Potenciada por IA".
+ * Portada del portfolio.
+ * Título, una línea de presentación, tecnologías y enlaces.
  */
 export const Hero = () => {
     const socialLinks = [
@@ -32,7 +31,7 @@ export const Hero = () => {
 
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center overflow-hidden">
-            {/* Fondo Ambient Layer */}
+            {/* Fondo */}
             <div className="absolute inset-0 -z-10 bg-[#0A0A0A]">
                 <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-blue-600/10 blur-[150px] rounded-full" />
                 <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-purple-600/10 blur-[150px] rounded-full" />
@@ -44,36 +43,25 @@ export const Hero = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="flex flex-col items-center gap-10 max-w-4xl"
             >
-                {/* Badge IA-Driven */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.5 }}
-                    className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400 text-xs font-semibold uppercase tracking-widest backdrop-blur-md"
-                >
-                    <Sparkles className="w-3 h-3" />
-                    <span>Potenciada por IA</span>
-                </motion.div>
-
-                {/* Logo con Gradiente */}
+                {/* Logo */}
                 <div className="p-1 rounded-3xl bg-gradient-to-br from-blue-500 to-purple-500 shadow-2xl shadow-blue-500/20">
                     <div className="bg-[#0A0A0A] p-6 rounded-[22px] backdrop-blur-xl">
                         <Logo className="w-24 h-24" />
                     </div>
                 </div>
 
-                {/* Textos Bio */}
+                {/* Presentación */}
                 <div className="space-y-6">
+                    <p className="text-zinc-400 text-lg font-semibold tracking-wide">Marcela Borgarello</p>
                     <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-white">
-                        Full Stack <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Developer</span>
+                        Desarrolladora <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">full stack</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-zinc-400 font-medium max-w-3xl leading-relaxed">
-                        Especialista en transformar ideas complejas en productos reales escalables
-                        (como <span className="text-zinc-200">Ginialym</span>) mediante el uso estratégico de IA.
+                        Construyo sistemas para comercios a partir de problemas que viví detrás del mostrador.
                     </p>
                 </div>
 
-                {/* Stack Highlights */}
+                {/* Tecnologías */}
                 <div className="flex flex-wrap items-center justify-center gap-3">
                     {stack.map((tech) => (
                         <span
@@ -85,7 +73,7 @@ export const Hero = () => {
                     ))}
                 </div>
 
-                {/* Social Links */}
+                {/* Enlaces */}
                 <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
                     {socialLinks.map((link) => (
                         <Link
@@ -108,23 +96,17 @@ export const Hero = () => {
                     <Link
                         href="/cv-marcela-borgarello.pdf"
                         download
-                        className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 transition-all text-blue-400 font-bold shadow-lg backdrop-blur-sm group"
+                        className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 transition-all text-blue-400 font-bold shadow-lg backdrop-blur-sm"
                     >
                         <motion.span
                             whileHover={{ scale: 1.05, y: -2 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center gap-2"
                         >
-                            <Sparkles className="w-5 h-5 group-hover:animate-pulse" />
+                            <FileDown className="w-5 h-5" />
                             Descargar CV
                         </motion.span>
                     </Link>
-                    <motion.div
-                        className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-yellow-500/20 bg-yellow-500/5 text-yellow-500/90 font-semibold italic"
-                    >
-                        <Award className="w-5 h-5" />
-                        Pull Shark
-                    </motion.div>
                 </div>
             </motion.div>
         </section>

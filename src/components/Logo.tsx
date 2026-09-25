@@ -1,6 +1,5 @@
 /**
  * Logo SVG estilizado con gradientes.
- * Representa la arquitectura y solidez del software.
  * Colores: #3b82f6 (azul) -> #a855f7 (violeta)
  */
 export const Logo = ({ className }: { className?: string }) => {
